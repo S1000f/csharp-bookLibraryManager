@@ -1,0 +1,15 @@
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\bin\Debug\BookManager.exe.config
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\bin\Debug\BookManager.exe
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\bin\Debug\BookManager.pdb
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.csprojAssemblyReference.cache
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.delay.resources
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.Form1.resources
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.Form2.resources
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.Form3.resources
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.Properties.Resources.resources
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.csproj.GenerateResource.cache
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.csproj.CopyComplete
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.exe
+C:\Users\KDH\Source\Repos\S1000f\csharp-bookLibraryManager\obj\Debug\BookManager.pdb
