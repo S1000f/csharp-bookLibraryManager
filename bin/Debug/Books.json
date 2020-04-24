@@ -6,30 +6,50 @@
         "name": "이것이 우분투 리눅스다",
         "publisher": "한빛미디어",
         "page": 796,
-        "borrowedat": "0001년 1월 1일 월요일",
-        "isborrowed": "0",
-        "userid": 0,
-        "username": ""
+        "borrowedat": "2020년 4월 16일 목요일",
+        "isborrowed": "1",
+        "userid": 2,
+        "username": "밀리"
       },
       {
         "isbn": "64684673357",
         "name": "JUnit in Action",
         "publisher": "인사이트",
         "page": 875,
-        "borrowedat": "2020년 4월 23일 목요일",
+        "borrowedat": "2020년 4월 24일 금요일",
         "isborrowed": "1",
-        "userid": 2,
-        "username": "밀리"
+        "userid": 3,
+        "username": "연이"
       },
       {
         "isbn": "8593059993555",
         "name": "스프링 부트와 AWS로 혼자 구현하는 웹 서비스",
         "publisher": "프리렉",
         "page": 495,
-        "borrowedat": "2020년 4월 23일 목요일",
+        "borrowedat": "2020년 4월 14일 화요일",
         "isborrowed": "1",
         "userid": 1,
         "username": "김도협"
+      },
+      {
+        "isbn": "78924759225",
+        "name": "열혈 Java 프로그래밍",
+        "publisher": "오렌지미디어",
+        "page": 999,
+        "borrowedat": "2020년 4월 24일 금요일",
+        "isborrowed": "1",
+        "userid": 4,
+        "username": "대갈통"
+      },
+      {
+        "isbn": "288924892402046",
+        "name": "Do it! C언어 입문",
+        "publisher": "이지스퍼블리싱",
+        "page": 575,
+        "borrowedat": "0001년 1월 1일 월요일",
+        "isborrowed": "0",
+        "userid": 0,
+        "username": null
       }
     ]
   }

@@ -17,10 +17,9 @@ namespace BookManager {
             dataGridView_Users.DataSource = DataManager.Users;
             dataGridView_Users.CurrentCellChanged += DataGridView_Users_CurrentCellChanged;
 
-            //=> 람다 
-            button_Add.Click += (sender, e) => {
+            button_Add.Click += (sender, e)=> {
                 try {
-                    if (DataManager.Users.Exists((x) => x.Id == int.Parse(textBox_ID.Text))) {
+                    if (DataManager.Users.Exists(x=> x.Id == int.Parse(textBox_ID.Text))) {
                         MessageBox.Show("사용자 ID가 겹칩니다.");
                     } else {
                         User user = new User() {
@@ -38,13 +37,13 @@ namespace BookManager {
                 }
             };
 
-            button_Modify.Click += (sender, e) => {
+            button_Modify.Click += (sender, e)=> {
                 try {
-                    User user = DataManager.Users.Single((x) => x.Id == int.Parse(textBox_ID.Text));
+                    User user = DataManager.Users.Single(x=> x.Id == int.Parse(textBox_ID.Text));
                     user.Name = textBox_Name.Text;
 
                     try {
-                        Book book = DataManager.Books.Single((x) => x.UserId == int.Parse(textBox_ID.Text));
+                        Book book = DataManager.Books.Single(x=> x.UserId == int.Parse(textBox_ID.Text));
                         book.UserName = textBox_Name.Text;
                     } catch (Exception) {
 
@@ -58,13 +57,12 @@ namespace BookManager {
                                      exception.GetType() + Environment.NewLine +
                                      exception.Message + Environment.NewLine +
                                      exception.StackTrace);
-
                 }
             };
 
-            button_Delete.Click += (sender, e) => {
+            button_Delete.Click += (sender, e)=> {
                 try {
-                    User user = DataManager.Users.Single((x) => x.Id == int.Parse(textBox_ID.Text));
+                    User user = DataManager.Users.Single(x=> x.Id == int.Parse(textBox_ID.Text));
                     DataManager.Users.Remove(user);
 
                     dataGridView_Users.DataSource = null;

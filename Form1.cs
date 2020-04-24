@@ -19,9 +19,9 @@ namespace BookManager {
             //사용자 수
             label_allUserCount.Text = DataManager.Users.Count.ToString();
             //대출중인 도서의 수
-            label_allBorrowedBook.Text = DataManager.Books.Where((x) => x.isBorrowed).Count().ToString();
+            label_allBorrowedBook.Text = DataManager.Books.Where(x=> x.isBorrowed).Count().ToString();
             //연체중인 도서의 수
-            label_allDelayedBook.Text = DataManager.Books.Where((x) => {
+            label_allDelayedBook.Text = DataManager.Books.Where(x=> {
                 return x.isBorrowed && x.BorrowedAt.AddDays(7) < DateTime.Now;
             }).Count().ToString();
 
@@ -57,11 +57,11 @@ namespace BookManager {
                 MessageBox.Show("사용자 Id를 입력해주세요.");
             } else {
                 try {
-                    Book book = DataManager.Books.Single((x) => x.Isbn == textBox_isbn.Text);
+                    Book book = DataManager.Books.Single(x=> x.Isbn == textBox_isbn.Text);
                     if (book.isBorrowed) {
                         MessageBox.Show("이미 대여 중인 도서입니다.");
                     } else {
-                        User user = DataManager.Users.Single((x) => x.Id.ToString() == textBox_id.Text);
+                        User user = DataManager.Users.Single(x=> x.Id.ToString() == textBox_id.Text);
                         book.UserId = user.Id;
                         book.UserName = user.Name;
                         book.isBorrowed = true;
@@ -72,6 +72,9 @@ namespace BookManager {
                         DataManager.Save();
 
                         MessageBox.Show("\"" + book.Name + "\"이/가\"" + user.Name + "\"님께 대여되었습니다.");
+
+                        //대출중인 도서의 수
+                        label_allBorrowedBook.Text = DataManager.Books.Where(x => x.isBorrowed).Count().ToString();
                     }
                 } catch (Exception) {
                     MessageBox.Show("존재하지 않는 도서 또는 사용자입니다.");
@@ -84,7 +87,7 @@ namespace BookManager {
                 MessageBox.Show("Isbn을 입력해주세요.");
             } else {
                 try {
-                    Book book = DataManager.Books.Single((x) => x.Isbn == textBox_isbn.Text);
+                    Book book = DataManager.Books.Single(x=> x.Isbn == textBox_isbn.Text);
                     if (book.isBorrowed) {
                         DateTime oldDay = book.BorrowedAt;
                         book.UserId = 0;
@@ -104,6 +107,14 @@ namespace BookManager {
                         } else {
                             MessageBox.Show("\"" + book.Name + "\"이/가 반납되었습니다.");
                         }
+
+                        //대출중인 도서의 수
+                        label_allBorrowedBook.Text = DataManager.Books.Where(x => x.isBorrowed).Count().ToString();
+                        //연체중인 도서의 수
+                        label_allDelayedBook.Text = DataManager.Books.Where(x => {
+                            return x.isBorrowed && x.BorrowedAt.AddDays(7) < DateTime.Now;
+                        }).Count().ToString();
+
                     } else {
                         MessageBox.Show("대여상태가 아닙니다.");
                     }
@@ -131,15 +142,20 @@ namespace BookManager {
             dataGridView_UserManager.DataSource = DataManager.Users;
             dataGridView_BookManager.DataSource = null;
             dataGridView_BookManager.DataSource = DataManager.Books;
-
-
         }
 
-        
-
+        private void 연체규정ToolStripMenuItem_Click(object sender, EventArgs e) {
+            new delay().ShowDialog();
+            DataManager.Load();
+            dataGridView_UserManager.DataSource = null;
+            dataGridView_UserManager.DataSource = DataManager.Users;
+            dataGridView_BookManager.DataSource = null;
+            dataGridView_BookManager.DataSource = DataManager.Books;
+        }
 
         private void dataGridView_BookManager_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
+
     }
 }

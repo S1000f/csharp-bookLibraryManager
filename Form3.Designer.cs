@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Users = new System.Windows.Forms.DataGridView();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_Delete = new System.Windows.Forms.Button();
+            this.button_Modify = new System.Windows.Forms.Button();
+            this.button_Add = new System.Windows.Forms.Button();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.button_Add = new System.Windows.Forms.Button();
-            this.button_Modify = new System.Windows.Forms.Button();
-            this.button_Delete = new System.Windows.Forms.Button();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Users)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,26 +53,10 @@
             this.groupBox1.Controls.Add(this.dataGridView_Users);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 726);
+            this.groupBox1.Size = new System.Drawing.Size(279, 726);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "사용자 현황";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button_Delete);
-            this.groupBox2.Controls.Add(this.button_Modify);
-            this.groupBox2.Controls.Add(this.button_Add);
-            this.groupBox2.Controls.Add(this.textBox_Name);
-            this.groupBox2.Controls.Add(this.textBox_ID);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(260, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(246, 248);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "사용자 추가/수정/삭제";
             // 
             // dataGridView_Users
             // 
@@ -86,78 +70,24 @@
             this.dataGridView_Users.Name = "dataGridView_Users";
             this.dataGridView_Users.RowHeadersWidth = 51;
             this.dataGridView_Users.RowTemplate.Height = 27;
-            this.dataGridView_Users.Size = new System.Drawing.Size(228, 695);
+            this.dataGridView_Users.Size = new System.Drawing.Size(266, 695);
             this.dataGridView_Users.TabIndex = 0;
             // 
-            // userBindingSource
+            // groupBox2
             // 
-            this.userBindingSource.DataSource = typeof(BookManager.User);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "사용자 ID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "이름";
-            // 
-            // textBox_ID
-            // 
-            this.textBox_ID.Location = new System.Drawing.Point(83, 30);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(148, 25);
-            this.textBox_ID.TabIndex = 2;
-            // 
-            // textBox_Name
-            // 
-            this.textBox_Name.Location = new System.Drawing.Point(83, 79);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(148, 25);
-            this.textBox_Name.TabIndex = 3;
-            // 
-            // button_Add
-            // 
-            this.button_Add.Location = new System.Drawing.Point(5, 210);
-            this.button_Add.Name = "button_Add";
-            this.button_Add.Size = new System.Drawing.Size(75, 32);
-            this.button_Add.TabIndex = 4;
-            this.button_Add.Text = "추가";
-            this.button_Add.UseVisualStyleBackColor = true;
-            // 
-            // button_Modify
-            // 
-            this.button_Modify.Location = new System.Drawing.Point(87, 210);
-            this.button_Modify.Name = "button_Modify";
-            this.button_Modify.Size = new System.Drawing.Size(75, 32);
-            this.button_Modify.TabIndex = 5;
-            this.button_Modify.Text = "수정";
-            this.button_Modify.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.button_Delete);
+            this.groupBox2.Controls.Add(this.button_Modify);
+            this.groupBox2.Controls.Add(this.button_Add);
+            this.groupBox2.Controls.Add(this.textBox_Name);
+            this.groupBox2.Controls.Add(this.textBox_ID);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(298, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(246, 248);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "사용자 추가/수정/삭제";
             // 
             // button_Delete
             // 
@@ -168,19 +98,91 @@
             this.button_Delete.Text = "삭제";
             this.button_Delete.UseVisualStyleBackColor = true;
             // 
+            // button_Modify
+            // 
+            this.button_Modify.Location = new System.Drawing.Point(87, 210);
+            this.button_Modify.Name = "button_Modify";
+            this.button_Modify.Size = new System.Drawing.Size(75, 32);
+            this.button_Modify.TabIndex = 5;
+            this.button_Modify.Text = "수정";
+            this.button_Modify.UseVisualStyleBackColor = true;
+            // 
+            // button_Add
+            // 
+            this.button_Add.Location = new System.Drawing.Point(5, 210);
+            this.button_Add.Name = "button_Add";
+            this.button_Add.Size = new System.Drawing.Size(75, 32);
+            this.button_Add.TabIndex = 4;
+            this.button_Add.Text = "추가";
+            this.button_Add.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Name
+            // 
+            this.textBox_Name.Location = new System.Drawing.Point(83, 79);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(148, 25);
+            this.textBox_Name.TabIndex = 3;
+            // 
+            // textBox_ID
+            // 
+            this.textBox_ID.Location = new System.Drawing.Point(83, 30);
+            this.textBox_ID.Name = "textBox_ID";
+            this.textBox_ID.Size = new System.Drawing.Size(148, 25);
+            this.textBox_ID.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "이름";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "사용자 ID";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "사용자 ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "사용자 이름";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(BookManager.User);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 751);
+            this.ClientSize = new System.Drawing.Size(556, 751);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "사용자 관리 페이지";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Users)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Users)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -191,8 +193,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView_Users;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -201,5 +201,7 @@
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Modify;
         private System.Windows.Forms.Button button_Add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

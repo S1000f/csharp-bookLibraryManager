@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BookManager {
-    class User {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
+    class Delayed : Book {
+        public int delayedDays { get; set; }
     }
 }
