@@ -57,7 +57,6 @@
     <Compile Include="delay.Designer.cs">
       <DependentUpon>delay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delayed.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

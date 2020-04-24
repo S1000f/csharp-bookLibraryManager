@@ -15,7 +15,6 @@ namespace BookManager {
             Text = "도서 관리";
 
             dataGridView_book.DataSource = DataManager.Books;
-
         }
 
         private void button_add_Click(object sender, EventArgs e) {
@@ -36,7 +35,7 @@ namespace BookManager {
                     DataManager.Save();
                 }
             } catch (Exception exception) {
-
+                Console.WriteLine(exception.StackTrace);
             }
         }
 
@@ -58,7 +57,7 @@ namespace BookManager {
 
         private void button_delete_Click(object sender, EventArgs e) {
             try {
-                Book book = DataManager.Books.Single((x) => x.Isbn == textBox_isbn.Text);
+                Book book = DataManager.Books.Single(x=> x.Isbn == textBox_isbn.Text);
                 DataManager.Books.Remove(book);
 
                 dataGridView_book.DataSource = null;
@@ -80,7 +79,6 @@ namespace BookManager {
             } catch (Exception) {
 
             }
-
         }
     }
 }

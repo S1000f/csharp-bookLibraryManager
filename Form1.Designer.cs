@@ -328,7 +328,6 @@
             this.dataGridView_BookManager.RowTemplate.Height = 27;
             this.dataGridView_BookManager.Size = new System.Drawing.Size(1128, 231);
             this.dataGridView_BookManager.TabIndex = 0;
-            this.dataGridView_BookManager.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_BookManager_CellContentClick);
             // 
             // groupBox4
             // 

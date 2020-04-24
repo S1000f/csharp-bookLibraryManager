@@ -15,7 +15,6 @@ namespace BookManager {
 
         static DataManager() {
             Load();
-
         }
 
         public static void JsonLoad() {
@@ -40,7 +39,6 @@ namespace BookManager {
                          Id = int.Parse(item["id"].ToString()),
                          Name = item["name"].ToString()
                      }).ToList<User>();
-
         }
 
         public static void Load() {
@@ -146,7 +144,5 @@ namespace BookManager {
             File.WriteAllText(@"./Books.xml", booksOutput);
             File.WriteAllText(@"./Users.xml", usersOutput);
         }
-
-
     }
 }
